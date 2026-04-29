@@ -1,8 +1,7 @@
 import express from 'express';
 const router = express.Router();
-import { registerUser} from '../../controllers/users/register.js'; 
-import { loginUser} from '../../controllers/users/login.js';
-import { getUsers } from '../../controllers/users/getUsers.js'; 
+import { registerUser, loginUser} from '../../controllers/users/auth.js'; 
+import { getUsers } from '../../controllers/users/users.js'; 
 import { auth } from "../../middlewares/auth.js";
 
 router.post('/register', registerUser);
