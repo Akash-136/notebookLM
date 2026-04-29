@@ -40,7 +40,7 @@ export const registerUser = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const user = new User({ name, email, password:hashedPassword });
+    const user = new User({ name, email, password:hashedPassword, avatar: req.file ? req.file.path : null });
 
     await user.save();
     res.status(201).json(user);
