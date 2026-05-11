@@ -15,7 +15,8 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   avatar: {
-    type: String,
+    url: String,
+    fileId: String
   }
 },{
   timestamps: true
