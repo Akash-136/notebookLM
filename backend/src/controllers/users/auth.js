@@ -56,7 +56,7 @@ export const registerUser = async (req, res) => {
       });
 
       avatarData = {
-        url: result.url,
+        url: result.filePath,
         fileId: result.fileId
       };
     }
